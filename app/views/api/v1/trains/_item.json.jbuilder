@@ -6,7 +6,7 @@ else
   json.logo_url nil
   json.logo_file_size nil
   json.logo_content_type nil
-end 
+end
 
 json.number train.number
 json.available_seats train.available_seats
