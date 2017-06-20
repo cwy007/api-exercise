@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :cities  do
     member do
       post :update_temp
@@ -17,5 +18,5 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'cities#index'
+  root 'welcome#index'
 end
