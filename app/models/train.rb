@@ -13,7 +13,7 @@ class Train < ApplicationRecord
     end
   end.flatten
 
-  def availabel_seats
+  def available_seats
     # 所有 seats 扣掉已经订位的资料
     return SEATS - self.reservations.pluck(:seat_number)
   end
