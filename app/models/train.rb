@@ -1,4 +1,5 @@
 class Train < ApplicationRecord
+  mount_uploader :train_logo, TrainLogoUploader
   validates_presence_of :number
   has_many :reservations
 
