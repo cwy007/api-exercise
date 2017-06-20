@@ -14,11 +14,12 @@
 
     <div class="container-fluid">
       <% if current_user %>
+        <%= current_user.email %> |
         <%= link_to('登出', destroy_user_session_path, :method => :delete) %>
-        <%= link_to('修改密码', edit_registration_path(:user)) %>
+        <%= link_to('修改密码', edit_user_registration_path) %>
       <% else %>
-        <%= link_to('注册', new_registration_path(:user)) %>
-        <%= link_to('登入', new_session_path(:user)) %>
+        <%= link_to('注册', new_user_registration_path) %>
+        <%= link_to('登入', new_user_session_path) %>
       <% end %>
 
       <%= yield %>
